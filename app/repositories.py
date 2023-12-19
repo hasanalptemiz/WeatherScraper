@@ -7,6 +7,7 @@ class WeatherRepository:
         self.client = MongoClient('localhost', 27017)
         self.db = self.client['hasanalp_temiz']
         self.collection = self.db['Weathers']
+        
     def insert_data(self, data):
         try:
             data_to_insert = data.dict()
